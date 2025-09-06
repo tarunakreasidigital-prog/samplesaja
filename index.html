@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koleksi Sepatu Trendi | NamaTokoAnda - Gaya di Setiap Langkah</title>
+    <meta name="description" content="Temukan koleksi sepatu terlengkap dan terbaru untuk pria, wanita, dan anak-anak. Dari sneakers kasual hingga sepatu formal, dapatkan gaya terbaikmu di sini. Kualitas premium, harga terjangkau.">
+    <meta name="keywords" content="toko sepatu, jual sepatu, sneakers, sepatu lari, sepatu formal, sepatu kasual, sepatu wanita, sepatu pria">
+    <meta name="author" content="NamaTokoAnda">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* === CSS Reset & Variabel === */
+        :root {
+            --primary-color: #3B82F6; /* Biru modern */
+            --secondary-color: #1F2937; /* Abu-abu gelap */
+            --accent-color: #F97316; /* Oranye untuk CTA */
+            --background-color: #F9FAFB; /* Latar belakang abu-abu muda */
+            --text-color: #374151; /* Warna teks utama */
+            --white-color: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* === Utilitas & Kontainer === */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3 {
+            color: var(--secondary-color);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--primary-color);
+            color: var(--white-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            background-color: #2563EB;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent-color);
+        }
+        
+        .btn-accent:hover {
+            background-color: #EA580C;
+        }
+
+        /* === Header & Navigasi === */
+        .header {
+            background-color: var(--white-color);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* === Hero Section === */
+        #hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            color: var(--white-color);
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            padding: 0;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--white-color);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* === Keunggulan Section === */
+        #features {
+            background-color: var(--white-color);
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+        .feature-item i {
+            font-size: 3rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        .feature-item h3 {
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        /* === Produk Section === */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: var(--white-color);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .product-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+        .product-info {
+            padding: 25px;
+        }
+        .product-category {
+            font-size: 0.8rem;
+            color: #9CA3AF;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+        .product-info h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .product-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        /* === Testimoni Section === */
+        #testimonials {
+            background-color: var(--white-color);
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .testimonial-card {
+            background-color: var(--background-color);
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid var(--primary-color);
+        }
+        .testimonial-card p {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        .testimonial-author img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .author-info h4 {
+            color: var(--secondary-color);
+        }
+        .author-info span {
+            font-size: 0.9rem;
+            color: #6B7280;
+        }
+
+        /* === CTA Section === */
+        #cta {
+            background-color: var(--secondary-color);
+            text-align: center;
+            color: var(--white-color);
+            padding: 100px 0;
+        }
+        #cta h2 {
+            color: var(--white-color);
+            margin-bottom: 20px;
+        }
+        #cta p {
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+
+        /* === Footer === */
+        footer {
+            background-color: var(--secondary-color);
+            color: #D1D5DB;
+            padding: 60px 0 20px;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-content h4 {
+            color: var(--white-color);
+            margin-bottom: 15px;
+        }
+        .footer-content ul {
+            list-style: none;
+        }
+        .footer-content ul li {
+            margin-bottom: 10px;
+        }
+        .footer-content a {
+            text-decoration: none;
+            color: #D1D5DB;
+            transition: color 0.3s ease;
+        }
+        .footer-content a:hover {
+            color: var(--primary-color);
+        }
+        .social-links a {
+            display: inline-block;
+            margin-right: 15px;
+            font-size: 1.5rem;
+        }
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #4B5563;
+        }
+
+        /* === Mobile Responsiveness === */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            h2 { font-size: 2rem; }
+
+            .nav-links {
+                display: none; /* Sembunyikan untuk versi mobile, bisa diganti dengan hamburger menu */
+            }
+
+            #hero {
+                height: 70vh;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8rem;
+            }
+
+            section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="container navbar">
+            <a href="#" class="logo">KICKZ</a>
+            <ul class="nav-links">
+                <li><a href="#hero">Beranda</a></li>
+                <li><a href="#products">Produk</a></li>
+                <li><a href="#features">Keunggulan</a></li>
+                <li><a href="#testimonials">Testimoni</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="hero">
+            <div class="hero-content">
+                <h1>Gaya Dimulai dari Langkah Pertamamu</h1>
+                <p>Jelajahi ratusan koleksi sepatu terbaik yang dirancang untuk kenyamanan dan gaya maksimal.</p>
+                <a href="#products" class="btn btn-accent">Belanja Sekarang <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+        <section id="features" class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-shipping-fast"></i>
+                    <h3>Pengiriman Cepat</h3>
+                    <p>Pesanan Anda akan tiba di depan pintu dalam 2-3 hari kerja.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-medal"></i>
+                    <h3>Kualitas Premium</h3>
+                    <p>Dibuat dari bahan terbaik untuk daya tahan dan kenyamanan.</p>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-tags"></i>
+                    <h3>Harga Terbaik</h3>
+                    <p>Kami menawarkan harga kompetitif untuk produk berkualitas.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="products" class="container">
+            <h2>Koleksi Pilihan Kami</h2>
+            <div class="product-grid">
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?q=80&w=1887&auto=format&fit=crop" alt="Sepatu Sneakers Wanita Pink">
+                    <div class="product-info">
+                        <span class="product-category">Sneakers</span>
+                        <h3>Aero Pink Casual</h3>
+                        <p class="product-price">Rp 450.000</p>
+                        <a href="#" class="btn">Lihat Detail</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?q=80&w=1925&auto=format&fit=crop" alt="Sepatu Lari Pria">
+                    <div class="product-info">
+                        <span class="product-category">Running</span>
+                        <h3>Velocity Runner X</h3>
+                        <p class="product-price">Rp 799.000</p>
+                        <a href="#" class="btn">Lihat Detail</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?q=80&w=1964&auto=format&fit=crop" alt="Sepatu Formal Pria Kulit">
+                    <div class="product-info">
+                        <span class="product-category">Formal</span>
+                        <h3>Classic Oxford Brown</h3>
+                        <p class="product-price">Rp 1.250.000</p>
+                        <a href="#" class="btn">Lihat Detail</a>
+                    </div>
+                </article>
+                <article class="product-card">
+                    <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?q=80&w=1898&auto=format&fit=crop" alt="Sepatu Vans Klasik">
+                    <div class="product-info">
+                        <span class="product-category">Casual</span>
+                        <h3>Retro Skate V-II</h3>
+                        <p class="product-price">Rp 850.000</p>
+                        <a href="#" class="btn">Lihat Detail</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+        
+        <section id="testimonials">
+            <div class="container">
+                <h2>Apa Kata Pelanggan Kami?</h2>
+                <div class="testimonial-grid">
+                    <div class="testimonial-card">
+                        <p>"Sepatunya keren banget dan nyaman dipakai. Pengirimannya juga super cepat. Sangat direkomendasikan!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Foto Pelanggan Budi">
+                            <div class="author-info">
+                                <h4>Budi Santoso</h4>
+                                <span>Pekerja Kreatif</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p>"Koleksinya lengkap dan selalu up-to-date. Saya sudah beberapa kali beli di sini dan tidak pernah kecewa."</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Foto Pelanggan Rina">
+                             <div class="author-info">
+                                <h4>Rina Wijaya</h4>
+                                <span>Mahasiswi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cta">
+            <div class="container">
+                <h2>Siap Meningkatkan Gayamu?</h2>
+                <p>Jangan sampai ketinggalan koleksi terbaru kami. Dapatkan penawaran eksklusif dengan bergabung menjadi member kami.</p>
+                <a href="#products" class="btn btn-accent">Jelajahi Semua Produk</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h4>KICKZ</h4>
+                    <p>Gaya di setiap langkah. Toko sepatu terpercaya dengan koleksi terlengkap.</p>
+                </div>
+                <div>
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="#hero">Beranda</a></li>
+                        <li><a href="#products">Produk</a></li>
+                        <li><a href="#features">Keunggulan</a></li>
+                        <li><a href="#testimonials">Testimoni</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Kategori</h4>
+                     <ul>
+                        <li><a href="#">Sneakers</a></li>
+                        <li><a href="#">Sepatu Lari</a></li>
+                        <li><a href="#">Sepatu Formal</a></li>
+                        <li><a href="#">Sepatu Kasual</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Ikuti Kami</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 KICKZ. Didesain dengan ❤️ untuk para pecinta sepatu.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
